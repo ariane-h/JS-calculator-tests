@@ -69,6 +69,10 @@ Calculator.prototype.operatorClick = function(operator){
 
   this.previousTotal = this.runningTotal;
   this.newTotal = true;
+
+  if (this.runningTotal === -0){
+    this.runningTotal = 'Error'
+  }
 }
 
 Calculator.prototype.clearClick = function(){
